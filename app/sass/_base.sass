@@ -2,16 +2,13 @@
 
 
 //----------------------fonts---------------------
-$fonts: 'GothamPro', sans-serif
-$fw: 'Font Awesome 5 Brands', sans-serif
+$fonts: 'Geometria', sans-serif
 //---------------------end-fonts---------------------
 
 //----------------------color---------------------
-$accent: #000
-$text: #000
-$btn: #666
-$title: #333
-
+$accent: #ecca69
+$bg: #252525
+$text: #fff
 //---------------------end-color---------------------
 
 body
@@ -21,8 +18,9 @@ body
 	font-family: $fonts
 	font-size: 14px
 	color: $text
-	line-height: 1.75
-	font-weight: 400
+	line-height: 1.4
+	font-weight: 300
+	background: $bg
 
 ::selection
 	background-color: $accent
@@ -33,14 +31,27 @@ a, div, ul, li, input, textarea
 	&:focus
 		outline: none
 
-section
-	overflow: hidden
 	
 h1, h2, h3, h4, h5, h6
-	font-weight: 700
-	line-height: 1.4
+	line-height: 1.1
 	margin: 0
 	padding: 0
+	font-weight: 300
+
+h1
+	color: #ececec
+	font-size: 48px
+	text-align: right
+	margin-bottom: 20px
+	margin-right: 35px
+
+h2
+	font-size: 30px
+	display: flex
+	align-items: center
+
+	img
+		margin-left: 20px
 
 ul
 	margin: 0
@@ -53,32 +64,37 @@ i
 	color: #fff
 
 input, textarea
-	border: #808080 1px solid
+	border: 1px solid #ffffff
 	border-radius: 0
 	outline: none
 	box-shadow: none
 	-webkit-appearance: none
+	background: $bg
+	height: 50px
+	padding: 0 30px
+	width: 100%
+	color: $text
 	
 	&:focus:required:invalid
-		border-color: #808080
+		border-color: #ffffff
 		outline: none
 		box-shadow: none
 		-webkit-appearance: none
 
 	&:required:valid
-		border-color: #808080
+		border-color: #ffffff
 		outline: none
 		box-shadow: none
 		-webkit-appearance: none
 
 	&::placeholder
-		color: #808080
-		font-size: 12px
-		text-transform: uppercase
-		line-height: 1
+		color: $text
+		font-size: 16px
+		line-height: 50px
+		color: #757575
 
 b, strong
-	font-weight: 700
+	font-weight: 500
 
 p
 	margin: 0
@@ -89,6 +105,9 @@ a:focus,
 a:hover
 	outline: none
 	text-decoration: none
+	color: $text
+	transition: all .6s
+	
 
 @import "_base/preloader"
 @import "_base/animation"
