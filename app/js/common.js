@@ -53,6 +53,18 @@ $(function() {
         var t = {
           name: jQuery('.form-' + index).find("input[name=name]").val(),
           phone: jQuery('.form-' + index).find("input[name=phone]").val(),
+
+          size: jQuery('.form-' + index).find("input[name=size]:checked").val(),
+          type: jQuery('.form-' + index).find("input[name=type]:checked").val(),
+          // baseone: jQuery('.form-' + index).find("input[name=baseone]").val(),
+          // basetwo: jQuery('.form-' + index).find("input[name=basetwo]").val(),
+
+          option_one: jQuery('.form-' + index).find("input[name=option_one]:checked").val(),
+          option_two: jQuery('.form-' + index).find("input[name=option_two]:checked").val(),
+          option_three: jQuery('.form-' + index).find("input[name=option_three]:checked").val(),
+          option_four: jQuery('.form-' + index).find("input[name=option_four]:checked").val(),
+          option_five: jQuery('.form-' + index).find("input[name=option_five]:checked").val(),
+
           subject: jQuery('.form-' + index).find("input[name=subject]").val()
         };
         ajaxSend('.form-' + index, t);
@@ -75,6 +87,15 @@ $(function() {
       }
     });
   }
+
+
+  // $( "#radio1 input" ).on( "click", function() {
+  //   $( "#base" ).val( $( ".size:checked" ).val());
+  // });
+
+  // $( "#radio2 input" ).on( "click", function() {
+  //   $( "#basetwo" ).val( $( ".type:checked" ).val());
+  // });
 
 //----------------------------------------fixed----------------------------------
   $(window).scroll(function(){
@@ -100,5 +121,5 @@ $(function() {
 //----------------------------------------preloader----------------------------------
 
   $(window).on('load', function(){
-    $('.preloader').delay(1000).fadeOut('slow');
+    $('.preloader').delay(3000).fadeOut('slow');
   });
